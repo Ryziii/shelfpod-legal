@@ -17,8 +17,8 @@ Or deploy with Wrangler after logging in:
 
 ```sh
 npx wrangler login
-npx wrangler pages project create shelfpod-legal --production-branch main
-npx wrangler pages deploy public --project-name shelfpod-legal --branch main
+npx wrangler pages project create shelfpod --production-branch main
+npx wrangler pages deploy public --project-name shelfpod --branch main
 ```
 
 After deployment, configure the public URLs in App Store Connect and in the ShelfPod app:
@@ -29,10 +29,10 @@ After deployment, configure the public URLs in App Store Connect and in the Shel
 For an Aliyun-managed domain, add the DNS record requested by Cloudflare when you attach the custom domain. A common setup is:
 
 - Type: `CNAME`
-- Name: `legal`
+- Name: `shelfpod`
 - Value: the Cloudflare Pages target shown in the custom domain setup
 
 This gives:
 
-- `https://legal.<your-domain>/privacy/`
-- `https://legal.<your-domain>/terms/`
+- `https://shelfpod.<your-domain>/privacy/`
+- `https://shelfpod.<your-domain>/terms/`
