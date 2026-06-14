@@ -13,6 +13,14 @@ Use these settings when connecting this repository in Cloudflare Pages:
 - Build command: leave empty
 - Build output directory: `public`
 
+Or deploy with Wrangler after logging in:
+
+```sh
+npx wrangler login
+npx wrangler pages project create shelfpod-legal --production-branch main
+npx wrangler pages deploy public --project-name shelfpod-legal --branch main
+```
+
 After deployment, configure the public URLs in App Store Connect and in the ShelfPod app:
 
 - Privacy Policy URL: `https://<your-domain>/privacy/`
